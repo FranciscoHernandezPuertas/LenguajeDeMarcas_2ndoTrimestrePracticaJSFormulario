@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script type="text/javascript" src="1UsuarioAddingText.js"></script>
+
+</head>
+<body>
+    <header>
+         <h1 id="encabezado1">Crea tu propio contenido</h1>
+    </header>
+    <main>
+        <section>
+            <p id="parrafo1"><span>Esta parte de la página puedes editarla a tu gusto.</span></p>
+            <p id="parrafo2"><span>Zona en la que añadir tu contenido.</span></p>
+        </section>
+         <form name="formularioCambio" method="post" action="envio.php">
+            <fieldset>
+                <legend>Modificación Contenido</legend>
+                <ul>
+                    <li>
+                        <input type="text" name="EncabezadoNuevo" size="40" placeholder="Escribe el título de la página"/>
+                    </li>
+                    <li>
+                        <button type="button">Cambia!</button>
+                    </li>
+                    <li>
+                        <input id="frase" type="text" name="frase" size="40" placeholder="Escribe una frase y haz click en el botón." />
+                    </li>
+                    <li>
+                        <button id="botonFrase" type="button">Añadir</button>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox1" onclick="muestraOculta();" checked="checked" />
+                        <label>Muestra encabezado de la página.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox2" onclick="muestraOculta();" checked="checked" />
+                        <label>Muestra párrafo añadido.</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Control contenido</legend>
+                <ul>
+                    <li>
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" id="pass1" name="Password" size="20" placeholder="Escribe tu contraseña"/>
+                        <input type="password" id="pass2" name="Password" size="20" placeholder="Repite contraseña"/>
+                    </li>
+                    <li>
+                        <label for="dni">NIF:</label>
+                        <input id="dni" size="20" type="text">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Añadir contenido</legend>
+                <ul>
+                    <li>
+                        <label>Escribe los nombres del equipo. Añádelos uno a uno y en el campo de más abajo irán apareciendo ordenados.</label>
+                    </li>
+                    <li>
+                        <label>Nombre: </label>
+                        <input type="text" name="nombreNuevo" size="20" />
+                        <input type="button" name="agregarNombre" value="agregar">
+                    </li>
+                    <li>
+                        <label>Nombres Ordenados:</label>
+                    </li>
+                    <li>
+                        <textarea cols="60" rows="10" name="ordenados">Los nombres ordenados aparecerán aquí.</textarea>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Botonera</legend>
+                <ul>
+                    <li>
+                        <input type="submit">
+                        <input type="reset">
+                    </li>
+                </ul>
+        </fieldset>
+         </form>
+    </main>
+</body>
+</html>

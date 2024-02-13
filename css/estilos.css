@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'fuentePropiaN';
+    src: url('../fuentes/Single_Day/SingleDay-Regular.ttf'); /* ajusta el nombre del archivo según el formato que hayas descargado */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fuentePropia';
+    src: url('../fuentes/Honk/Protest_Riot/ProtestRiot-Regular.ttf'); /* ajusta el nombre del archivo según el formato que hayas descargado */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'fuentePropia';
+    background-color:#F8F8F8;
+    color:#505050;
+}
+
+header, main > section {
+    text-align: center;
+    font-family: 'fuentePropia';
+}
+
+fieldset {
+    margin: 1em 1em;
+    border: 2px solid purple;
+    border-radius: 5% 10%;
+}
+
+legend{
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    padding: 0.5em;
+}
+
+li:nth-child(2), li:nth-child(4){
+    text-align: center;
+}
+
+input + input {
+    margin-top: 1em;
+}
+
+p > span{
+    font-style: italic;
+}
+p.nuevo {
+    font-family: 'fuentePropiaN';
+}
+/*maquetación formulario*/
+form {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 'agregar agregar controlar lista'
+                        'botones botones botones botones';
+}
+fieldset:first-child{
+    grid-area: agregar;
+}
+fieldset:nth-child(2){
+    grid-area: controlar;
+}
+fieldset:nth-child(3){
+    grid-area: lista;
+}
+fieldset:last-child{
+    grid-area: botones;
+}
+
+
+
+/*estilos botones*/
+button, input[type="button"],input[type="submit"], input[type="reset"] {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.10em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 10%;
+  }
+  
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+/*clase a aplicar si la revisión del NIF y de la contraseña han resultado correctas*/  
+.correcto {
+    border: 5px solid green;
+}
+/*clase a aplicar si la revisión del NIF y de la contraseña han resultado incorrectas*/
+.incorrecto {
+    border: 5px solid red;
+}
+
+fieldset:last-child {
+    text-align: center;
+}
